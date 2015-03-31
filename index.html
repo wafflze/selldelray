@@ -8,7 +8,7 @@
     <script src="Scripts/script.js"></script>
 </head>
 
-<body>
+<body ng-cloak>
     <h1>selling delray!</h1>
 
     <div ng-controller="HeaderController">
@@ -38,9 +38,101 @@
                 <a href="#contact">Contact</a>
             </li>
         </ul>
+
+        <div class="well" ng-cloak>
+            <div ng-controller="FirstSearchController">
+                <form class="form-horizontal">
+                    <fieldset>
+
+                        <!-- Form Name -->
+                        <legend>{{searchTitle}}</legend>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="selectCity">Select City</label>
+                            <div class="col-md-2">
+                                <select id="selectCity" name="selectCity" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="selectCommunity">Select Community</label>
+                            <div class="col-md-2">
+                                <select id="selectCommunity" name="selectCommunity" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="selectPrice">Select Price</label>
+                            <div class="col-md-2">
+                                <select id="selectPrice" name="selectPrice" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="selectBeds">Select Beds</label>
+                            <div class="col-md-2">
+                                <select id="selectBeds" name="selectBeds" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Select Basic -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="selectBaths">Select Baths</label>
+                            <div class="col-md-2">
+                                <select id="selectBaths" name="selectBaths" class="form-control">
+                                    <option value="1">Option one</option>
+                                    <option value="2">Option two</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <!-- Multiple Radios (inline) -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="rdPropertyType">Property Type</label>
+                            <div class="col-md-2">
+                                <label class="radio-inline" for="rdPropertyType-0">
+                                    <input type="radio" name="rdPropertyType" id="rdPropertyType-0" value="Home" checked="checked"> Home
+                                </label>
+                                <label class="radio-inline" for="rdPropertyType-1">
+                                    <input type="radio" name="rdPropertyType" id="rdPropertyType-1" value="Condo"> Condo
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Button -->
+                        <div class="form-group">
+                            <label class="col-md-3 control-label" for="btnSearch"></label>
+                            <div class="col-md-2">
+                                <button id="btnSearch" name="btnSearch" type="submit" class="btn btn-primary">Search</button>
+                                       <button id="btnReset" name="btnReset" type="reset" class="btn">Search</button>
+                            </div>
+                        </div>
+
+                    </fieldset>
+                </form>
+
+            </div>
+        </div>
     </div>
-<div class="container">
-    <div id="view" ng-view></div>
+
+    <div class="container">
+        <div id="view" ng-view></div>
 
     </div>
     <script data-require="jquery@2.1.3" data-semver="2.1.3" src="http://code.jquery.com/jquery-2.1.3.min.js"></script>
