@@ -1,0 +1,25 @@
+<html>
+<head>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.2.min.js"></script>
+</head>
+<body> 
+
+<script>
+$(document).ready(function() {
+   $("#open").click(function() {
+       $.ajax({
+           url : "helloworld.txt",
+           dataType: "text",
+           success : function (data) {
+               $("#text").text(data);
+           }
+       });
+   });
+}); 
+</script>
+<h1>csv to text area test
+</h1>
+<textarea name="text" rows="40" cols="80" placeholder="Load CSV Shit here"></textarea>
+
+</body>
+</html>  
